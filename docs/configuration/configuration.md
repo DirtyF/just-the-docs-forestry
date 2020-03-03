@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Configuration
-nav_order: 
-published: false
+has_children: true
+permalink: /docs/configuration
 
 ---
-This is children page.
+
+# Configuration
+
+This is a children page.
