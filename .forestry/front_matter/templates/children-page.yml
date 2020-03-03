@@ -1,4 +1,26 @@
 ---
 label: Children page
 hide_body: false
-fields: []
+fields:
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  hidden: true
+  default: default
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: parent
+  type: text
+  config:
+    required: false
+  label: parent
+- name: nav_order
+  type: text
+  config:
+    required: false
+  label: nav_order
