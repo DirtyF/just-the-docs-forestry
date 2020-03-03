@@ -13,14 +13,6 @@ fields:
 - type: number
   name: nav_order
   label: nav_order
-- name: has_children
-  type: boolean
-  label: has_children
-- name: parent
-  type: text
-  config:
-    required: false
-  label: parent
 - name: permalink
   type: text
   config:
