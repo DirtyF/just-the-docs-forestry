@@ -26,3 +26,5 @@ fields:
   config:
     required: false
   label: permalink
+pages:
+- docs/navigation-structure.md
