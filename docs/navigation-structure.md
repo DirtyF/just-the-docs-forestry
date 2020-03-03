@@ -3,7 +3,6 @@ layout: default
 title: Navigation Structure
 nav_order: 99
 has_children: false
-parent: ''
 
 ---
 # Navigation Structure
