@@ -1,0 +1,28 @@
+---
+label: Page
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  default: default
+  hidden: true
+- type: text
+  name: title
+  label: title
+- type: number
+  name: nav_order
+  label: nav_order
+- name: has_children
+  type: boolean
+  label: has_children
+- name: parent
+  type: text
+  config:
+    required: false
+  label: parent
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: permalink

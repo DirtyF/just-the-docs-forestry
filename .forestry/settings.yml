@@ -4,19 +4,20 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: README.md
-  label: README
-  match: "**/*"
-  read_only: true
-- type: document
-  path: index.md
-  label: Home
 - type: directory
   path: docs
   label: Docs
   create: all
   match: "**/*"
+  templates:
+  - page
+- type: document
+  path: index.md
+  label: Home
+- type: document
+  path: README.md
+  label: README
+  read_only: true
 upload_dir: assets/images
 public_path: "/assets/images"
 front_matter_path: ''
