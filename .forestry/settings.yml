@@ -7,7 +7,6 @@ sections:
 - type: document
   path: index.md
   label: Home
-  match: "**/*"
 - type: directory
   path: docs
   label: Docs
