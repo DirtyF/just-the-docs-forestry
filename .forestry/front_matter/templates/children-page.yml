@@ -24,3 +24,7 @@ fields:
   config:
     required: false
   label: nav_order
+- name: has_toc
+  type: boolean
+  label: has_toc
+  default: true
