@@ -15,8 +15,7 @@ published: false
 
 {: .no_toc .text-delta }
 
-1. TOC
-   {:toc}
+1. TOC {:toc}
 
 ***
 
@@ -36,13 +35,17 @@ To specify a page order, use the `nav_order` parameter in your pages' YAML front
 
 {: .no_toc }
 
-```yaml
----
-layout: default
-title: Customization
-nav_order: 4
----
-```
+    xxxxxxxxxx
+
+    ---
+
+    layout: default
+
+    title: Customization
+
+    nav_order: 4
+
+    ---
 
 ***
 
@@ -54,13 +57,21 @@ For specific pages that you do not wish to include in the main navigation, e.g. 
 
 {: .no_toc }
 
-```yaml
----
-layout: default
-title: 404
-nav_exclude: true
----
-```
+    xxxxxxxxxx
+
+1
+
+    ---
+
+2
+
+    layout: default
+
+    title: 404
+
+    nav_exclude: true
+
+    ---
 
 ***
 
@@ -68,29 +79,102 @@ nav_exclude: true
 
 Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like:
 
+    xxxxxxxxxx
+
+1
+
     +-- ..
+
+2
+
     |-- (Jekyll files)
+
+3
+
     |
+
+4
+
     |-- docs
+
+5
+
     |   |-- ui-components
+
+6
+
     |   |   |-- index.md  (parent page)
+
+7
+
     |   |   |-- buttons.md
+
+8
+
     |   |   |-- code.md
+
+9
+
     |   |   |-- labels.md
+
+10
+
     |   |   |-- tables.md
+
+11
+
     |   |   +-- typography.md
+
+12
+
     |   |
+
+13
+
     |   |-- utilities
+
+14
+
     |   |   |-- index.md      (parent page)
+
+15
+
     |   |   |-- color.md
+
+16
+
     |   |   |-- layout.md
+
+17
+
     |   |   |-- responsive-modifiers.md
+
+18
+
     |   |   +-- typography.md
+
+19
+
     |   |
+
+20
+
     |   |-- (other md files, pages with no children)
+
+21
+
     |   +-- ..
+
+22
+
     |
+
+23
+
     |-- (Jekyll files)
+
+24
+
     +-- ..
 
 On the parent pages, add this YAML front matter parameter:
@@ -101,14 +185,31 @@ On the parent pages, add this YAML front matter parameter:
 
 {: .no_toc }
 
-```yaml
----
-layout: default
-title: UI Components
-nav_order: 2
-has_children: true
----
-```
+    xxxxxxxxxx
+
+1
+
+    ---
+
+2
+
+    layout: default
+
+3
+
+    title: UI Components
+
+4
+
+    nav_order: 2
+
+5
+
+    has_children: true
+
+6
+
+    ---
 
 Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, which has children and is ordered second in the main nav.
 
@@ -122,14 +223,31 @@ On child pages, simply set the `parent:` YAML front matter to whatever the paren
 
 {: .no_toc }
 
-```yaml
----
-layout: default
-title: Buttons
-parent: UI Components
-nav_order: 2
----
-```
+    xxxxxxxxxx
+
+1
+
+    ---
+
+2
+
+    layout: default
+
+3
+
+    title: Buttons
+
+4
+
+    parent: UI Components
+
+5
+
+    nav_order: 2
+
+6
+
+    ---
 
 The Buttons page appears as a child of UI Components and appears second in the UI Components section.
 
@@ -141,15 +259,35 @@ By default, all pages with children will automatically append a Table of Content
 
 {: .no_toc }
 
-```yaml
----
-layout: default
-title: UI Components
-nav_order: 2
-has_children: true
-has_toc: false
----
-```
+    xxxxxxxxxx
+
+1
+
+    ---
+
+2
+
+    layout: default
+
+3
+
+    title: UI Components
+
+4
+
+    nav_order: 2
+
+5
+
+    has_children: true
+
+6
+
+    has_toc: false
+
+7
+
+    ---
 
 ### Children with children
 
@@ -164,38 +302,112 @@ Child pages can also have children (grandchildren). This is achieved by using a 
 
 {: .no_toc }
 
-```yaml
----
-layout: default
-title: Buttons
-parent: UI Components
-nav_order: 2
-has_children: true
----
-```
+    xxxxxxxxxx
 
-```yaml
----
-layout: default
-title: Buttons Child Page
-parent: Buttons
-grand_parent: UI Components
-nav_order: 1
----
-```
+1
+
+    ---
+
+2
+
+    layout: default
+
+3
+
+    title: Buttons
+
+4
+
+    parent: UI Components
+
+5
+
+    nav_order: 2
+
+6
+
+    has_children: true
+
+7
+
+    ---
+
+    xxxxxxxxxx
+
+1
+
+    ---
+
+2
+
+    layout: default
+
+3
+
+    title: Buttons Child Page
+
+4
+
+    parent: Buttons
+
+5
+
+    grand_parent: UI Components
+
+6
+
+    nav_order: 1
+
+7
+
+    ---
 
 This would create the following navigation structure:
 
+    xxxxxxxxxx
+
+1
+
     +-- ..
+
+2
+
     |
+
+3
+
     |-- UI Components
+
+4
+
     |   |-- ..
+
+5
+
     |   |
+
+6
+
     |   |-- Buttons
+
+7
+
     |   |   |-- Button Child Page
+
+8
+
     |   |
+
+9
+
     |   |-- ..
+
+10
+
     |
+
+11
+
     +-- ..
 
 ***
@@ -208,12 +420,23 @@ To add a auxiliary navigation item to your site (in the upper right on all pages
 
 {: .no_toc }
 
-```yaml
-# Aux links for the upper right navigation
-aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
-```
+    xxxxxxxxxx
+
+1
+
+    # Aux links for the upper right navigation
+
+2
+
+    aux_links:
+
+3
+
+      "Just the Docs on GitHub":
+
+4
+
+        - "//github.com/pmarsceill/just-the-docs"
 
 ***
 
@@ -225,15 +448,38 @@ To generate a Table of Contents on your docs pages, you can use the `{:toc}` met
 
 {: .no_toc }
 
-```markdown
-# Navigation Structure
-{: .no_toc }
+    xxxxxxxxxx
 
-## Table of contents
-{: .no_toc .text-delta }
+1
 
-1. TOC
-{:toc}
-```
+    # Navigation Structure
+
+2
+
+    {: .no_toc }
+
+3
+
+    ​
+
+4
+
+    ## Table of contents
+
+5
+
+    {: .no_toc .text-delta }
+
+6
+
+    ​
+
+7
+
+    1. TOC
+
+8
+
+    {:toc}
 
 This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself.
