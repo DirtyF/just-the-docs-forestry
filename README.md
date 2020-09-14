@@ -10,29 +10,25 @@
 
 - GitHub, GitLab or BitBucket account
 - Ruby > 2.5
-- AJekyll ~> 3.8
+- Jekyll ~> 3.8
 
 ## Content Management
 
 ![](images/forestry.jpg)
 
-[![import to Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=forestryio/just-the-docs-jekyll-starter&engine=jekyll&version=0.64.1)
+[![import to Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=forestryio/just-the-docs-jekyll-starter&engine=jekyll)
 
-This project has been pre-configured to work with [Forestry](https://forestry.io) a git-based CMS, [import your repository in Forestry](https://app.forestry.io/quick-start?repo=forestryio/just-the-docs-jekyll-starter&engine=jekyll&version=0.64.1) and you'll be able to edit and preview your site ✨. \
+This project has been pre-configured to work with [Forestry](https://forestry.io) a git-based CMS, [import your repository in Forestry](https://app.forestry.io/quick-start?repo=forestryio/just-the-docs-jekyll-starter&engine=jekyll) and you'll be able to edit and preview your site ✨.
 
-Any changes you make in Forestry will be commited back to the repo, and deployed if you use [Netlify](#netlify) or [ZEIT now](#zeit-now).
+Any changes you make in Forestry will be commited back to the repo, and deployed if you use [Netlify](#netlify) or [Vercel](#vercel).
 
 ## Local development
 
 ```bash
-# clone the repository
-git clone git@github.com:forestryio/just-the-docs-jekyll-starter.git
-
-# cd in the project directory
-cd just-the-docs-jekyll-starter
-
+# install project dependencies
+bundle install
 # Start local dev server
-jekyll serve
+bundle exec jekyll serve
 ```
 
 ## Deployment and hosting
@@ -46,9 +42,9 @@ jekyll serve
 
 That's it, now your site gets deployed automatically on `git push` or when saving documents from Forestry.
 
-### ZEIT Now
+### Vercel
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/forestryio/just-the-docs-jekyll-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/forestryio/just-the-docs-jekyll-starter)
 
 Follow the steps.
 
